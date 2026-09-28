@@ -430,27 +430,30 @@ async function tvyEpgTemizle() {
     tvyEpgBaslat().then(async () => {
       // 2) Günlük otomatik temizlik (günde 1 kez)
       await tvyGunlukTemizlik();
-      
+
       // 3) Header ikonunu güncelle (kalan gün ile)
       await epgDurumTooltipGuncelle();
-      
+
       // 4) Hatırlatıcı (2-4 gün kaldıysa)
       setTimeout(() => tvyEpgHatirlatici(), 3000);
+
+      // 5) Otomatik güncelleme kontrolü (EPG yüklendikten 5 sn sonra)
+      setTimeout(() => tvyEpgOtomatikGuncelle(), 5000);
     });
-    
-    // 5) 6 saatte bir periyodik kontrol
+
+    // 6) 6 saatte bir periyodik kontrol
     setInterval(async () => {
       await tvyGunlukTemizlik();
       await epgDurumTooltipGuncelle();
       await tvyEpgHatirlatici();
     }, 6 * 60 * 60 * 1000);
-    
-    // 6) Header ikonunu 30 dakikada bir güncelle
+
+    // 7) Header ikonunu 30 dakikada bir güncelle
     setInterval(() => {
       if (typeof epgDurumTooltipGuncelle === 'function') epgDurumTooltipGuncelle();
     }, 30 * 60 * 1000);
   }
-  
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', baslat);
   } else {
@@ -579,22 +582,26 @@ function tvyKalanGunSayisi() {
 // ═══════════════════════════════════════════════════
 async function tvyEpgHatirlatici() {
     if (!tvyData) return;
-    
+
     const kalanGun = tvyKalanGunSayisi();
     const sonUyari = localStorage.getItem('pasham_tvy_son_uyari');
     const bugun = new Date().toISOString().slice(0, 10);
-    
-    // Aynı gün tekrar uyarmayalım
+    const url = localStorage.getItem('pasham_tvy_epg_url') || TVY_EPG_URL;
+
     if (sonUyari === bugun) return;
-    
+
     console.log(`[TVY-EPG] 📅 EPG'de ${kalanGun} gün kaldı`);
-    
-    if (kalanGun <= 2) {
-        if (typeof toast === 'function') {
-            toast(`🚨 EPG'de sadece ${kalanGun} gün kaldı! Yeni JSON yükleyin`, 'error');
+
+    if (kalanGun <= 4 && url) {
+        const mesaj = kalanGun <= 2
+            ? `🚨 EPG'de sadece ${kalanGun} gün kaldı!\n\nŞimdi URL'den güncellensin mi?`
+            : `📡 EPG'de ${kalanGun} gün kaldı.\n\nŞimdi güncellensin mi?`;
+
+        if (confirm(mesaj)) {
+            await tvyEpgUrlIndir(url);
         }
         localStorage.setItem('pasham_tvy_son_uyari', bugun);
-    } else if (kalanGun <= 4) {
+    } else if (kalanGun <= 4 && !url) {
         if (typeof toast === 'function') {
             toast(`📡 EPG'de ${kalanGun} gün kaldı — yakında güncelleyin`, 'warning');
         }
@@ -624,5 +631,102 @@ async function epgDurumTooltipGuncelle() {
     el.title = `⚠️ TVY EPG ${durum.yasSaat.toFixed(0)} saat eski — Güncelleyin\n📅 Kalan: ${kalanGun} gün`;
     el.style.color = 'var(--warning)';
   }
+}
+// ═══════════════════════════════════════════════════
+// URL'DEN OTOMATİK EPG İNDİRME (JSON dosyasız güncelleme)
+// ═══════════════════════════════════════════════════
+
+// EPG JSON dosyasının GitHub Raw URL'si
+const TVY_EPG_URL = localStorage.getItem('pasham_tvy_epg_url') 
+    || 'https://raw.githubusercontent.com/pasham2006-boop/epg-data/refs/heads/main/epg.json';
+
+// URL'yi ayarla (Ayarlar sayfasından)
+function tvyEpgUrlKaydet(url) {
+    if (!url) {
+        localStorage.removeItem('pasham_tvy_epg_url');
+        if (typeof toast === 'function') toast('🗑️ EPG URL temizlendi', 'success');
+        return;
+    }
+    let c = String(url).trim();
+    if (!/^https?:\/\//i.test(c)) c = 'https://' + c;
+    localStorage.setItem('pasham_tvy_epg_url', c);
+    if (typeof toast === 'function') toast('🌐 EPG URL kaydedildi', 'success');
+}
+
+// URL'den EPG indir
+async function tvyEpgUrlIndir(url) {
+    url = url || localStorage.getItem('pasham_tvy_epg_url') || TVY_EPG_URL;
+    if (!url) {
+        if (typeof toast === 'function') toast('❌ EPG URL tanımlı değil', 'error');
+        return false;
+    }
+
+    try {
+        console.log('[TVY-EPG] 🌐 URL\'den indiriliyor:', url);
+        if (typeof toast === 'function') toast('⏳ EPG indiriliyor...', 'info');
+
+        const res = await fetch(url + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+
+        const data = await res.json();
+        if (!data.epg) throw new Error('Geçersiz format — "epg" alanı yok');
+
+        const db = await tvyDbAc();
+        await new Promise((resolve, reject) => {
+            const tx = db.transaction(TVY_DB_STORE, 'readwrite');
+            tx.objectStore(TVY_DB_STORE).put({
+                at: Date.now(),
+                tarih: data.tarih,
+                kanalSayisi: data.kanalSayisi,
+                toplamProgram: data.toplamProgram,
+                epg: data.epg,
+            }, 'main');
+            tx.oncomplete = () => resolve();
+            tx.onerror = () => reject(tx.error);
+        });
+
+        tvyData = data.epg;
+        const kanalSayisi = Object.keys(tvyData).length;
+        const programSayisi = Object.values(tvyData).reduce((s, k) => s + (k.programlar?.length || 0), 0);
+
+        console.log('[TVY-EPG] ✅ URL\'den yüklendi:', kanalSayisi, 'kanal,', programSayisi, 'program');
+        if (typeof toast === 'function') {
+            toast(`✅ EPG güncellendi: ${kanalSayisi} kanal, ${programSayisi} program`, 'success');
+        }
+
+        // Uyarıları sıfırla
+        localStorage.removeItem('pasham_tvy_son_uyari');
+
+        // Header ikonunu güncelle
+        if (typeof epgDurumTooltipGuncelle === 'function') epgDurumTooltipGuncelle();
+        if (typeof tvyEpgDurumGuncelle === 'function') tvyEpgDurumGuncelle();
+
+        return true;
+    } catch (e) {
+        console.error('[TVY-EPG] ❌ URL indirme hatası:', e);
+        if (typeof toast === 'function') {
+            toast('❌ EPG indirilemedi: ' + e.message, 'error');
+        }
+        return false;
+    }
+}
+
+// ═══ OTOMATİK GÜNCELLEME KONTROLÜ ═══
+async function tvyEpgOtomatikGuncelle() {
+    const url = localStorage.getItem('pasham_tvy_epg_url') || TVY_EPG_URL;
+    if (!url) {
+        console.log('[TVY-EPG] ℹ️ Otomatik güncelleme için URL ayarlanmamış');
+        return;
+    }
+
+    const durum = await tvyEpgDurum();
+    const kalanGun = tvyKalanGunSayisi();
+
+    if (!durum || !durum.guncel || kalanGun <= 2) {
+        console.log('[TVY-EPG] 🔄 Otomatik güncelleme tetiklendi (kalan:', kalanGun, 'gün)');
+        await tvyEpgUrlIndir(url);
+    } else {
+        console.log('[TVY-EPG] ✅ EPG güncel, indirmeye gerek yok (kalan:', kalanGun, 'gün)');
+    }
 }
 console.log('[TVY-EPG] 📦 Modül yüklendi v2.1');
