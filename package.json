@@ -1,0 +1,7 @@
+{
+  "name": "dizi-epg-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "refresh": "node engine.mjs" },
+  "dependencies": { "playwright": "^1.47.0" }
+}

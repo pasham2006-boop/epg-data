@@ -1,0 +1,32 @@
+name: EPG Yenile
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'      # Pazartesi 06:00 TR
+  workflow_dispatch:          # ← "Yenile" butonu
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dizi-epg
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'npm' }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node engine.mjs
+      - name: Commit & Push
+        run: |
+          git config user.name  "epg-bot"
+          git config user.email "epg-bot@users.noreply.github.com"
+          git add dizi-epg.json dizi-epg.xml
+          if git diff --staged --quiet; then echo "Değişiklik yok";
+          else git commit -m "EPG $(date -u +%F)"; git push; fi
