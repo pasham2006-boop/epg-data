@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="dizi-epg" source-info-url="https://dizitakvimi.com">
+  <channel id="now"><display-name>NOW</display-name></channel>
+  <channel id="show-tv"><display-name>Show TV</display-name></channel>
+  <channel id="star-tv"><display-name>Star TV</display-name></channel>
+  <channel id="trt-1"><display-name>TRT 1</display-name></channel>
+  <channel id="kanal-d"><display-name>Kanal D</display-name></channel>
+  <programme start="20261008000000 +0300" stop="20261008023000 +0300" channel="now">
+    <title lang="tr">Halef: Köklerin Çağrısı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008041500 +0300" stop="20261008050000 +0300" channel="now">
+    <title lang="tr">İnadına Aşk</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008050000 +0300" stop="20261008060000 +0300" channel="now">
+    <title lang="tr">Yasak Elma</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008060000 +0300" stop="20261008071500 +0300" channel="now">
+    <title lang="tr">Son Yaz</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008123000 +0300" stop="20261008133000 +0300" channel="now">
+    <title lang="tr">Halef: Köklerin Çağrısı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008163000 +0300" stop="20261008173000 +0300" channel="now">
+    <title lang="tr">Halef: Köklerin Çağrısı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008200000 +0300" stop="20261008224500 +0300" channel="now">
+    <title lang="tr">Halef: Köklerin Çağrısı</title>
+  </programme>
+  <programme start="20261008001500 +0300" stop="20261008024500 +0300" channel="show-tv">
+    <title lang="tr">Kızılcık Şerbeti</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008002000 +0300" stop="20261008030000 +0300" channel="show-tv">
+    <title lang="tr">Güneşin Doğduğu Yer</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008024500 +0300" stop="20261008044500 +0300" channel="show-tv">
+    <title lang="tr">Muhtemel Aşk</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008030000 +0300" stop="20261008053000 +0300" channel="show-tv">
+    <title lang="tr">Altı Üstü İstanbul</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008053000 +0300" stop="20261008080000 +0300" channel="show-tv">
+    <title lang="tr">Gözleri Karadeniz</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008060000 +0300" stop="20261008090000 +0300" channel="show-tv">
+    <title lang="tr">Siyah Kalp</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008070000 +0300" stop="20261008090000 +0300" channel="show-tv">
+    <title lang="tr">Siyah Kalp</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008090000 +0300" stop="20261008123000 +0300" channel="show-tv">
+    <title lang="tr">Kuzey Yıldızı: İlk Aşk</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008140000 +0300" stop="20261008160000 +0300" channel="show-tv">
+    <title lang="tr">Güneşin Doğduğu Yer</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008150000 +0300" stop="20261008182500 +0300" channel="show-tv">
+    <title lang="tr">Bahar</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008150000 +0300" stop="20261008182500 +0300" channel="show-tv">
+    <title lang="tr">Kızılcık Şerbeti</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008200000 +0300" stop="20261008232000 +0300" channel="show-tv">
+    <title lang="tr">Güneşin Doğduğu Yer</title>
+  </programme>
+  <programme start="20261008200000 +0300" stop="20261008231000 +0300" channel="show-tv">
+    <title lang="tr">Muhtemel Aşk</title>
+  </programme>
+  <programme start="20261008232000 +0300" stop="20261008242000 +0300" channel="show-tv">
+    <title lang="tr">Güneşin Doğduğu Yer</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008003000 +0300" stop="20261008030000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008021500 +0300" stop="20261008050000 +0300" channel="star-tv">
+    <title lang="tr">Sevdiğim Sensin</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008030000 +0300" stop="20261008050000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008033000 +0300" stop="20261008050000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008040000 +0300" stop="20261008053000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008050000 +0300" stop="20261008070000 +0300" channel="star-tv">
+    <title lang="tr">İki Aile</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008053000 +0300" stop="20261008070000 +0300" channel="star-tv">
+    <title lang="tr">İki Aile</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008070000 +0300" stop="20261008093000 +0300" channel="star-tv">
+    <title lang="tr">Aramızda Kalsın</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008133000 +0300" stop="20261008150000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008134500 +0300" stop="20261008150000 +0300" channel="star-tv">
+    <title lang="tr">Fazilet Hanım ve Kızları</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008200000 +0300" stop="20261008210000 +0300" channel="star-tv">
+    <title lang="tr">Sevdiğim Sensin</title>
+  </programme>
+  <programme start="20261008004500 +0300" stop="20261008033000 +0300" channel="trt-1">
+    <title lang="tr">Gönül Dağı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008010000 +0300" stop="20261008033500 +0300" channel="trt-1">
+    <title lang="tr">Gönül Dağı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008014500 +0300" stop="20261008025000 +0300" channel="trt-1">
+    <title lang="tr">Seksenler</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008023000 +0300" stop="20261008031000 +0300" channel="trt-1">
+    <title lang="tr">Seksenler</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008025000 +0300" stop="20261008052000 +0300" channel="trt-1">
+    <title lang="tr">Alparslan: Büyük Selçuklu</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008031000 +0300" stop="20261008054500 +0300" channel="trt-1">
+    <title lang="tr">Alparslan: Büyük Selçuklu</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008033000 +0300" stop="20261008054500 +0300" channel="trt-1">
+    <title lang="tr">Alparslan: Büyük Selçuklu</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008033500 +0300" stop="20261008054500 +0300" channel="trt-1">
+    <title lang="tr">Alparslan: Büyük Selçuklu</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008071500 +0300" stop="20261008103000 +0300" channel="trt-1">
+    <title lang="tr">Kalk Gidelim</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008073000 +0300" stop="20261008103000 +0300" channel="trt-1">
+    <title lang="tr">Kalk Gidelim</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008131500 +0300" stop="20261008134500 +0300" channel="trt-1">
+    <title lang="tr">Seksenler</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008133000 +0300" stop="20261008141000 +0300" channel="trt-1">
+    <title lang="tr">Seksenler</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008134500 +0300" stop="20261008173000 +0300" channel="trt-1">
+    <title lang="tr">Taşacak Bu Deniz</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008141000 +0300" stop="20261008173000 +0300" channel="trt-1">
+    <title lang="tr">Alparslan: Büyük Selçuklu</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008224000 +0300" stop="20261008234000 +0300" channel="trt-1">
+    <title lang="tr">Mehmed: Fetihler Sultanı</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008040000 +0300" stop="20261008070000 +0300" channel="kanal-d">
+    <title lang="tr">Siyah Beyaz Aşk</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008070000 +0300" stop="20261008090000 +0300" channel="kanal-d">
+    <title lang="tr">İkizler Memo-Can</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008110000 +0300" stop="20261008134500 +0300" channel="kanal-d">
+    <title lang="tr">Yaprak Dökümü</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008164500 +0300" stop="20261008190000 +0300" channel="kanal-d">
+    <title lang="tr">Üç Kız Kardeş</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008200000 +0300" stop="20261008233000 +0300" channel="kanal-d">
+    <title lang="tr">Haysiyet</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+  <programme start="20261008233000 +0300" stop="20261008243000 +0300" channel="kanal-d">
+    <title lang="tr">Daha 17</title>
+    <desc lang="tr">Tekrar</desc>
+  </programme>
+</tv>
