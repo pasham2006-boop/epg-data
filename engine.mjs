@@ -26,38 +26,72 @@ function slugify(ad) {
     .replace(/^-|-$/g,'');
 }
 
-async function scrapeDay(page, iso){
-  const url = `${SITE}/calendar?view=calendar&date=${iso}`;
+function parseTrDate(txt){
+  const m = txt.match(/(\d{1,2})\s+(\S+)\s+(\d{4})/);
+  if(!m) return null;
+  const mo = TR_MONTHS[m[2]];
+  return mo===undefined ? null : `${m[3]}-${pad(mo+1)}-${pad(+m[1])}`;
+}
+
+function mondayOf(d) {
+  const x = new Date(d);
+  const day = x.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  x.setDate(x.getDate() + diff);
+  x.setHours(0,0,0,0);
+  return x;
+}
+
+/* ══════════════════════════════════════════════════════
+   HAFTALIK TARAMA — tek istekte 7 gün!
+   "view=week&start=YYYY-MM-DD" (Pazartesi) → tüm hafta
+   ══════════════════════════════════════════════════════ */
+async function scrapeWeek(page, weekStartISO){
+  const url = `${SITE}/calendar?view=week&start=${weekStartISO}`;
+  console.log('  GET', url);
+
   await page.goto(url, { waitUntil:'domcontentloaded', timeout:60000 });
   await page.waitForSelector('article', { timeout:20000 }).catch(()=>{});
-  await page.waitForTimeout(500); // JS render bitsin
+  await page.waitForTimeout(1500);
 
   return await page.evaluate(() => {
-    const out = [];
-    for (const a of document.querySelectorAll('article')){
-      const chAnchor = a.querySelector('a[href^="/channel/"]');
-      out.push({
-        time:      a.querySelector('time')?.textContent?.trim() || '',
-        title:     a.querySelector('h3')?.textContent?.trim()   || '',
-        channel:   chAnchor?.textContent?.trim()                || '',
-        channelId: (chAnchor?.getAttribute('href')||'').replace('/channel/','') || 'unknown',
-        tags:      [...a.querySelectorAll('span')].map(s=>s.textContent.trim())
-                     .filter(t=>['Yeni Bölüm','Yeni','Tekrar','Final','Final Bölüm'].includes(t))
-      });
+    const out = {};
+    const sections = document.querySelectorAll('section');
+    for (const sec of sections){
+      const h2 = sec.querySelector('h2');
+      if (!h2) continue;
+      const dateText = h2.textContent.trim();
+      // "9 Ekim 2026 Cuma" gibi tarih başlığı olan h2'ler
+      if (!/\d{1,2}\s+\S+\s+\d{4}/.test(dateText)) continue;
+
+      const items = [];
+      for (const a of sec.querySelectorAll('article')){
+        const chAnchor = a.querySelector('a[href^="/channel/"]');
+        items.push({
+          time:      a.querySelector('time')?.textContent?.trim() || '',
+          title:     a.querySelector('h3')?.textContent?.trim()   || '',
+          channel:   chAnchor?.textContent?.trim()                || '',
+          channelId: (chAnchor?.getAttribute('href')||'').replace('/channel/','') || 'unknown',
+          tags:      [...a.querySelectorAll('span')].map(s=>s.textContent.trim())
+                       .filter(t=>['Yeni Bölüm','Yeni','Tekrar','Final','Final Bölüm'].includes(t))
+        });
+      }
+      out[dateText] = items;
     }
     return out;
   });
 }
 
+/* ═══════════════ MAIN ═══════════════ */
 const t0 = today();
 const wanted = Array.from({length:DAYS}, (_,i)=> ymd(addD(t0,i)));
+console.log('Hedef pencere:', wanted[0], '→', wanted[wanted.length-1]);
 
 let cache = { days:{} };
 if (existsSync(JSON_F)){
   try {
     const old = JSON.parse(await readFile(JSON_F,'utf8'));
-    if (old.kanallar) cache.days = {};
-    else cache = old;
+    if (old.days) cache = old;
   } catch {}
 }
 
@@ -66,20 +100,32 @@ const page    = await browser.newPage({
   userAgent:'Mozilla/5.0 (compatible; dizi-epg/1.0)'
 });
 
-for (const iso of wanted){
+// Bu hafta + gelecek hafta (14 günü kapsar)
+const thisMonday = mondayOf(t0);
+const nextMonday = addD(thisMonday, 7);
+const weekStarts = [ymd(thisMonday), ymd(nextMonday)];
+
+for (const weekStart of weekStarts){
   try {
-    const items = await scrapeDay(page, iso);
-    cache.days[iso] = items;
-    console.log(`OK ${iso}  ${items.length} yayin`);
+    console.log(`\n📅 Hafta: ${weekStart}`);
+    const weekData = await scrapeWeek(page, weekStart);
+    for (const [dateText, items] of Object.entries(weekData)){
+      const iso = parseTrDate(dateText);
+      if (!iso) continue;
+      cache.days[iso] = items;
+      console.log(`  OK ${iso}  ${items.length} yayin`);
+    }
   } catch(e){
-    console.warn(`HATA ${iso}  ${e.message}`);
+    console.warn(`  HATA ${weekStart}  ${e.message}`);
   }
 }
 await browser.close();
 
+/* Rolling pencere — sadece bugün + 6 gün */
 const keep = new Set(wanted);
 for (const k of Object.keys(cache.days)) if (!keep.has(k)) delete cache.days[k];
 
+/* ═══════════════ KANAL BAZLI DÖNÜŞÜM ═══════════════ */
 const byChannel = {};
 
 for (const [iso, items] of Object.entries(cache.days)){
@@ -94,7 +140,9 @@ for (const [iso, items] of Object.entries(cache.days)){
     if (!endT){ eh = sh + 1; em = sm; }
 
     let stopISO = iso;
-    if (endT && (eh < sh || (eh===sh && em<=sm))) stopISO = ymd(addD(new Date(iso+'T12:00:00'),1));
+    if (endT && (eh < sh || (eh===sh && em<=sm))) {
+      stopISO = ymd(addD(new Date(iso+'T12:00:00'),1));
+    }
 
     const slug = slugify(it.channel);
     if (!slug) continue;
@@ -127,8 +175,9 @@ const out = {
 };
 
 await writeFile(JSON_F, JSON.stringify(out, null, 2));
-console.log(`-> ${JSON_F}  ${out.kanalSayisi} kanal, ${toplamProgram} program`);
+console.log(`\n-> ${JSON_F}  ${out.kanalSayisi} kanal, ${toplamProgram} program`);
 
+/* ═══════════════ XMLTV ═══════════════ */
 const esc = s => String(s).replace(/[<>&"']/g, c =>
   ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]));
 
