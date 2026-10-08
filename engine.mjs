@@ -28,8 +28,9 @@ function slugify(ad) {
 
 async function scrapeDay(page, iso){
   const url = `${SITE}/calendar?view=calendar&date=${iso}`;
-  await page.goto(url, { waitUntil:'networkidle', timeout:60000 });
-  await page.waitForSelector('article', { timeout:15000 }).catch(()=>{});
+  await page.goto(url, { waitUntil:'domcontentloaded', timeout:60000 });
+  await page.waitForSelector('article', { timeout:20000 }).catch(()=>{});
+  await page.waitForTimeout(500); // JS render bitsin
 
   return await page.evaluate(() => {
     const out = [];
