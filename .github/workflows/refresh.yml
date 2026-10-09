@@ -2,8 +2,8 @@ name: EPG Yenile
 
 on:
   schedule:
-    - cron: '0 3 * * 1'      # Pazartesi 06:00 TR
-  workflow_dispatch:          # ← "Yenile" butonu
+    - cron: '0 3 * * *'      # her gün 06:00 TR
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,14 +15,13 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
       - run: npm install
-      - run: npx playwright install --with-deps chromium
       - run: node engine.mjs
       - name: Commit & Push
         run: |
