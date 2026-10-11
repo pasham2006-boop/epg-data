@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="dizi-epg" source-info-url="https://1001dizi.net">
-  <channel id="star-tv"><display-name>Star TV</display-name></channel>
   <channel id="kanal-d"><display-name>Kanal D</display-name></channel>
   <channel id="trt-1"><display-name>TRT 1</display-name></channel>
   <channel id="now"><display-name>NOW</display-name></channel>
-  <channel id="atv"><display-name>atv</display-name></channel>
-  <programme start="20261010200000 +0300" stop="20261010190000 +0300" channel="star-tv">
-    <title lang="tr">Başkalarının Hayatı</title>
-    <desc lang="tr">003. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261010200000 +0300" stop="20261011200000 +0300" channel="kanal-d">
-    <title lang="tr">Güller ve Günahlar</title>
-    <desc lang="tr">0037. Bölüm · Yeni Bölüm</desc>
-  </programme>
   <programme start="20261011200000 +0300" stop="20261011190000 +0300" channel="kanal-d">
     <title lang="tr">Daha On Yedi</title>
     <desc lang="tr">0020. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261010200000 +0300" stop="20261011173000 +0300" channel="trt-1">
-    <title lang="tr">Gönül Dağı</title>
-    <desc lang="tr">00226. Bölüm · Yeni Bölüm</desc>
   </programme>
   <programme start="20261011173000 +0300" stop="20261011200000 +0300" channel="trt-1">
     <title lang="tr">Kod Adı: Kırlangıç</title>
@@ -32,9 +18,5 @@
   <programme start="20261011200000 +0300" stop="20261011190000 +0300" channel="now">
     <title lang="tr">Ömür Usta</title>
     <desc lang="tr">003. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261010200000 +0300" stop="20261010190000 +0300" channel="atv">
-    <title lang="tr">Mercan Köşk</title>
-    <desc lang="tr">006. Bölüm · Yeni Bölüm</desc>
   </programme>
 </tv>

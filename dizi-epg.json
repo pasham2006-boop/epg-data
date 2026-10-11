@@ -1,34 +1,15 @@
 {
-  "at": 1791601425187,
-  "tarih": "2026-10-10",
+  "at": 1791687861201,
+  "tarih": "2026-10-11",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-10",
-  "pencereBit": "2026-10-16",
-  "kanalSayisi": 5,
-  "toplamProgram": 8,
+  "pencereBas": "2026-10-11",
+  "pencereBit": "2026-10-17",
+  "kanalSayisi": 3,
+  "toplamProgram": 4,
   "kanallar": {
-    "star-tv": {
-      "isim": "Star TV",
-      "programlar": [
-        {
-          "baslangic": "2026-10-10T20:00:00+03:00",
-          "bitis": "2026-10-10T19:00:00+03:00",
-          "baslik": "Başkalarının Hayatı",
-          "aciklama": "003. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/baskalarinin-hayati.jpg"
-        }
-      ]
-    },
     "kanal-d": {
       "isim": "Kanal D",
       "programlar": [
-        {
-          "baslangic": "2026-10-10T20:00:00+03:00",
-          "bitis": "2026-10-11T20:00:00+03:00",
-          "baslik": "Güller ve Günahlar",
-          "aciklama": "0037. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/guller-ve-gunahlar.jpg"
-        },
         {
           "baslangic": "2026-10-11T20:00:00+03:00",
           "bitis": "2026-10-11T19:00:00+03:00",
@@ -41,13 +22,6 @@
     "trt-1": {
       "isim": "TRT 1",
       "programlar": [
-        {
-          "baslangic": "2026-10-10T20:00:00+03:00",
-          "bitis": "2026-10-11T17:30:00+03:00",
-          "baslik": "Gönül Dağı",
-          "aciklama": "00226. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/gonul-dagi.jpg"
-        },
         {
           "baslangic": "2026-10-11T17:30:00+03:00",
           "bitis": "2026-10-11T20:00:00+03:00",
@@ -73,18 +47,6 @@
           "baslik": "Ömür Usta",
           "aciklama": "003. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/omur-usta.jpg"
-        }
-      ]
-    },
-    "atv": {
-      "isim": "atv",
-      "programlar": [
-        {
-          "baslangic": "2026-10-10T20:00:00+03:00",
-          "bitis": "2026-10-10T19:00:00+03:00",
-          "baslik": "Mercan Köşk",
-          "aciklama": "006. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/mercan-kosk.jpg"
         }
       ]
     }
