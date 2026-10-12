@@ -1,20 +1,159 @@
 {
-  "at": 1791687861201,
-  "tarih": "2026-10-11",
+  "at": 1791774343205,
+  "tarih": "2026-10-12",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-11",
-  "pencereBit": "2026-10-17",
-  "kanalSayisi": 3,
-  "toplamProgram": 4,
+  "pencereBas": "2026-10-12",
+  "pencereBit": "2026-10-18",
+  "kanalSayisi": 6,
+  "toplamProgram": 24,
   "kanallar": {
+    "atv": {
+      "isim": "atv",
+      "programlar": [
+        {
+          "baslangic": "2026-10-12T20:00:00+03:00",
+          "bitis": "2026-10-15T20:00:00+03:00",
+          "baslik": "Altı Üstü İstanbul",
+          "aciklama": "0016. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/alti-ustu-istanbul.jpg"
+        },
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-17T20:00:00+03:00",
+          "baslik": "Güneşin Doğduğu Yer",
+          "aciklama": "005. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/gunesin-dogdugu-yer.jpg"
+        },
+        {
+          "baslangic": "2026-10-17T20:00:00+03:00",
+          "bitis": "2026-10-17T19:00:00+03:00",
+          "baslik": "Mercan Köşk",
+          "aciklama": "007. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/mercan-kosk.jpg"
+        }
+      ]
+    },
+    "now": {
+      "isim": "NOW",
+      "programlar": [
+        {
+          "baslangic": "2026-10-12T20:00:00+03:00",
+          "bitis": "2026-10-13T20:00:00+03:00",
+          "baslik": "Sevdam Karadeniz",
+          "aciklama": "001. Bölüm · YENİ DİZİ",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/sevdam-karadeniz.jpg"
+        },
+        {
+          "baslangic": "2026-10-13T20:00:00+03:00",
+          "bitis": "2026-10-14T20:00:00+03:00",
+          "baslik": "Anne Yarısı",
+          "aciklama": "004. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/anne-yarisi.jpg"
+        },
+        {
+          "baslangic": "2026-10-14T20:00:00+03:00",
+          "bitis": "2026-10-15T20:00:00+03:00",
+          "baslik": "Yeraltı",
+          "aciklama": "0018. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/yeralti.jpg"
+        },
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-18T20:00:00+03:00",
+          "baslik": "Halef",
+          "aciklama": "0039. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/halef.jpg"
+        },
+        {
+          "baslangic": "2026-10-18T20:00:00+03:00",
+          "bitis": "2026-10-18T19:00:00+03:00",
+          "baslik": "Ömür Usta",
+          "aciklama": "004. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/omur-usta.jpg"
+        }
+      ]
+    },
+    "show-tv": {
+      "isim": "Show TV",
+      "programlar": [
+        {
+          "baslangic": "2026-10-14T20:00:00+03:00",
+          "bitis": "2026-10-15T20:00:00+03:00",
+          "baslik": "Sevdan Bir Ateş",
+          "aciklama": "006. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/sevdan-bir-ates.jpg"
+        },
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-16T20:00:00+03:00",
+          "baslik": "Muhtemel Aşk",
+          "aciklama": "0018. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/muhtemel-ask.jpg"
+        },
+        {
+          "baslangic": "2026-10-16T20:00:00+03:00",
+          "bitis": "2026-10-16T19:00:00+03:00",
+          "baslik": "Kızılcık Şerbeti",
+          "aciklama": "00143. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/kizilcik-serbeti.jpg"
+        }
+      ]
+    },
+    "star-tv": {
+      "isim": "Star TV",
+      "programlar": [
+        {
+          "baslangic": "2026-10-13T20:00:00+03:00",
+          "bitis": "2026-10-15T20:00:00+03:00",
+          "baslik": "Tuzlu Kahve",
+          "aciklama": "Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/tuzlu-kahve.jpg"
+        },
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-17T20:00:00+03:00",
+          "baslik": "Sevdiğim Sensin",
+          "aciklama": "0021. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/sevdigim-sensin.jpg"
+        },
+        {
+          "baslangic": "2026-10-17T20:00:00+03:00",
+          "bitis": "2026-10-17T19:00:00+03:00",
+          "baslik": "Başkalarının Hayatı",
+          "aciklama": "004. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/baskalarinin-hayati.jpg"
+        }
+      ]
+    },
     "kanal-d": {
       "isim": "Kanal D",
       "programlar": [
         {
-          "baslangic": "2026-10-11T20:00:00+03:00",
-          "bitis": "2026-10-11T19:00:00+03:00",
+          "baslangic": "2026-10-12T20:00:00+03:00",
+          "bitis": "2026-10-13T20:00:00+03:00",
+          "baslik": "Uzak Şehir",
+          "aciklama": "0068. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/uzak-sehir.jpg"
+        },
+        {
+          "baslangic": "2026-10-13T20:00:00+03:00",
+          "bitis": "2026-10-17T20:00:00+03:00",
+          "baslik": "Haysiyet",
+          "aciklama": "006. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/haysiyet.jpg"
+        },
+        {
+          "baslangic": "2026-10-17T20:00:00+03:00",
+          "bitis": "2026-10-18T20:00:00+03:00",
+          "baslik": "Güller ve Günahlar",
+          "aciklama": "0038. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/guller-ve-gunahlar.jpg"
+        },
+        {
+          "baslangic": "2026-10-18T20:00:00+03:00",
+          "bitis": "2026-10-18T19:00:00+03:00",
           "baslik": "Daha On Yedi",
-          "aciklama": "0020. Bölüm · Yeni Bölüm",
+          "aciklama": "0021. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/daha-on-yedi.jpg"
         }
       ]
@@ -23,30 +162,46 @@
       "isim": "TRT 1",
       "programlar": [
         {
-          "baslangic": "2026-10-11T17:30:00+03:00",
-          "bitis": "2026-10-11T20:00:00+03:00",
+          "baslangic": "2026-10-12T20:00:00+03:00",
+          "bitis": "2026-10-13T20:00:00+03:00",
+          "baslik": "Evlilik Güzeldir",
+          "aciklama": "006. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/evlilik-guzeldir.jpg"
+        },
+        {
+          "baslangic": "2026-10-13T20:00:00+03:00",
+          "bitis": "2026-10-16T20:00:00+03:00",
+          "baslik": "Mehmed: Fetihler Sultanı",
+          "aciklama": "0088. Bölüm · ÖZETSİZ",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/mehmed-fetihler-sultani.jpg"
+        },
+        {
+          "baslangic": "2026-10-16T20:00:00+03:00",
+          "bitis": "2026-10-17T20:00:00+03:00",
+          "baslik": "Taşacak Bu Deniz",
+          "aciklama": "0034. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/tasacak-bu-deniz.jpg"
+        },
+        {
+          "baslangic": "2026-10-17T20:00:00+03:00",
+          "bitis": "2026-10-18T17:30:00+03:00",
+          "baslik": "Gönül Dağı",
+          "aciklama": "00227. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/gonul-dagi.jpg"
+        },
+        {
+          "baslangic": "2026-10-18T17:30:00+03:00",
+          "bitis": "2026-10-18T20:00:00+03:00",
           "baslik": "Kod Adı: Kırlangıç",
-          "aciklama": "3089. Bölüm · Yeni Bölüm",
+          "aciklama": "3090. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/kod-adi-kirlangic.jpg"
         },
         {
-          "baslangic": "2026-10-11T20:00:00+03:00",
-          "bitis": "2026-10-11T19:00:00+03:00",
+          "baslangic": "2026-10-18T20:00:00+03:00",
+          "bitis": "2026-10-18T19:00:00+03:00",
           "baslik": "Teşkilat",
-          "aciklama": "00188. Bölüm · Yeni Bölüm",
+          "aciklama": "00189. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/teskilat.jpg"
-        }
-      ]
-    },
-    "now": {
-      "isim": "NOW",
-      "programlar": [
-        {
-          "baslangic": "2026-10-11T20:00:00+03:00",
-          "bitis": "2026-10-11T19:00:00+03:00",
-          "baslik": "Ömür Usta",
-          "aciklama": "003. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/omur-usta.jpg"
         }
       ]
     }
