@@ -1,48 +1,15 @@
 {
-  "at": 1791774343205,
-  "tarih": "2026-10-12",
+  "at": 1791860730412,
+  "tarih": "2026-10-13",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-12",
-  "pencereBit": "2026-10-18",
+  "pencereBas": "2026-10-13",
+  "pencereBit": "2026-10-19",
   "kanalSayisi": 6,
-  "toplamProgram": 24,
+  "toplamProgram": 20,
   "kanallar": {
-    "atv": {
-      "isim": "atv",
-      "programlar": [
-        {
-          "baslangic": "2026-10-12T20:00:00+03:00",
-          "bitis": "2026-10-15T20:00:00+03:00",
-          "baslik": "Altı Üstü İstanbul",
-          "aciklama": "0016. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/alti-ustu-istanbul.jpg"
-        },
-        {
-          "baslangic": "2026-10-15T20:00:00+03:00",
-          "bitis": "2026-10-17T20:00:00+03:00",
-          "baslik": "Güneşin Doğduğu Yer",
-          "aciklama": "005. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/gunesin-dogdugu-yer.jpg"
-        },
-        {
-          "baslangic": "2026-10-17T20:00:00+03:00",
-          "bitis": "2026-10-17T19:00:00+03:00",
-          "baslik": "Mercan Köşk",
-          "aciklama": "007. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/mercan-kosk.jpg"
-        }
-      ]
-    },
     "now": {
       "isim": "NOW",
       "programlar": [
-        {
-          "baslangic": "2026-10-12T20:00:00+03:00",
-          "bitis": "2026-10-13T20:00:00+03:00",
-          "baslik": "Sevdam Karadeniz",
-          "aciklama": "001. Bölüm · YENİ DİZİ",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/sevdam-karadeniz.jpg"
-        },
         {
           "baslangic": "2026-10-13T20:00:00+03:00",
           "bitis": "2026-10-14T20:00:00+03:00",
@@ -99,6 +66,25 @@
         }
       ]
     },
+    "atv": {
+      "isim": "atv",
+      "programlar": [
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-17T20:00:00+03:00",
+          "baslik": "Güneşin Doğduğu Yer",
+          "aciklama": "005. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/gunesin-dogdugu-yer.jpg"
+        },
+        {
+          "baslangic": "2026-10-17T20:00:00+03:00",
+          "bitis": "2026-10-17T19:00:00+03:00",
+          "baslik": "Mercan Köşk",
+          "aciklama": "007. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/mercan-kosk.jpg"
+        }
+      ]
+    },
     "star-tv": {
       "isim": "Star TV",
       "programlar": [
@@ -106,7 +92,7 @@
           "baslangic": "2026-10-13T20:00:00+03:00",
           "bitis": "2026-10-15T20:00:00+03:00",
           "baslik": "Tuzlu Kahve",
-          "aciklama": "Yeni Bölüm",
+          "aciklama": "007. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/tuzlu-kahve.jpg"
         },
         {
@@ -128,13 +114,6 @@
     "kanal-d": {
       "isim": "Kanal D",
       "programlar": [
-        {
-          "baslangic": "2026-10-12T20:00:00+03:00",
-          "bitis": "2026-10-13T20:00:00+03:00",
-          "baslik": "Uzak Şehir",
-          "aciklama": "0068. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/uzak-sehir.jpg"
-        },
         {
           "baslangic": "2026-10-13T20:00:00+03:00",
           "bitis": "2026-10-17T20:00:00+03:00",
@@ -161,13 +140,6 @@
     "trt-1": {
       "isim": "TRT 1",
       "programlar": [
-        {
-          "baslangic": "2026-10-12T20:00:00+03:00",
-          "bitis": "2026-10-13T20:00:00+03:00",
-          "baslik": "Evlilik Güzeldir",
-          "aciklama": "006. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/evlilik-guzeldir.jpg"
-        },
         {
           "baslangic": "2026-10-13T20:00:00+03:00",
           "bitis": "2026-10-16T20:00:00+03:00",
