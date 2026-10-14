@@ -1,45 +1,12 @@
 {
-  "at": 1791860730412,
-  "tarih": "2026-10-13",
+  "at": 1791947761273,
+  "tarih": "2026-10-14",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-13",
-  "pencereBit": "2026-10-19",
+  "pencereBas": "2026-10-14",
+  "pencereBit": "2026-10-20",
   "kanalSayisi": 6,
-  "toplamProgram": 20,
+  "toplamProgram": 16,
   "kanallar": {
-    "now": {
-      "isim": "NOW",
-      "programlar": [
-        {
-          "baslangic": "2026-10-13T20:00:00+03:00",
-          "bitis": "2026-10-14T20:00:00+03:00",
-          "baslik": "Anne Yarısı",
-          "aciklama": "004. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/anne-yarisi.jpg"
-        },
-        {
-          "baslangic": "2026-10-14T20:00:00+03:00",
-          "bitis": "2026-10-15T20:00:00+03:00",
-          "baslik": "Yeraltı",
-          "aciklama": "0018. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/yeralti.jpg"
-        },
-        {
-          "baslangic": "2026-10-15T20:00:00+03:00",
-          "bitis": "2026-10-18T20:00:00+03:00",
-          "baslik": "Halef",
-          "aciklama": "0039. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/halef.jpg"
-        },
-        {
-          "baslangic": "2026-10-18T20:00:00+03:00",
-          "bitis": "2026-10-18T19:00:00+03:00",
-          "baslik": "Ömür Usta",
-          "aciklama": "004. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/omur-usta.jpg"
-        }
-      ]
-    },
     "show-tv": {
       "isim": "Show TV",
       "programlar": [
@@ -89,13 +56,6 @@
       "isim": "Star TV",
       "programlar": [
         {
-          "baslangic": "2026-10-13T20:00:00+03:00",
-          "bitis": "2026-10-15T20:00:00+03:00",
-          "baslik": "Tuzlu Kahve",
-          "aciklama": "007. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/tuzlu-kahve.jpg"
-        },
-        {
           "baslangic": "2026-10-15T20:00:00+03:00",
           "bitis": "2026-10-17T20:00:00+03:00",
           "baslik": "Sevdiğim Sensin",
@@ -115,13 +75,6 @@
       "isim": "Kanal D",
       "programlar": [
         {
-          "baslangic": "2026-10-13T20:00:00+03:00",
-          "bitis": "2026-10-17T20:00:00+03:00",
-          "baslik": "Haysiyet",
-          "aciklama": "006. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/haysiyet.jpg"
-        },
-        {
           "baslangic": "2026-10-17T20:00:00+03:00",
           "bitis": "2026-10-18T20:00:00+03:00",
           "baslik": "Güller ve Günahlar",
@@ -137,16 +90,35 @@
         }
       ]
     },
+    "now": {
+      "isim": "NOW",
+      "programlar": [
+        {
+          "baslangic": "2026-10-14T20:00:00+03:00",
+          "bitis": "2026-10-15T20:00:00+03:00",
+          "baslik": "Yeraltı",
+          "aciklama": "0018. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/yeralti.jpg"
+        },
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-18T20:00:00+03:00",
+          "baslik": "Halef",
+          "aciklama": "0039. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/halef.jpg"
+        },
+        {
+          "baslangic": "2026-10-18T20:00:00+03:00",
+          "bitis": "2026-10-18T19:00:00+03:00",
+          "baslik": "Ömür Usta",
+          "aciklama": "004. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/omur-usta.jpg"
+        }
+      ]
+    },
     "trt-1": {
       "isim": "TRT 1",
       "programlar": [
-        {
-          "baslangic": "2026-10-13T20:00:00+03:00",
-          "bitis": "2026-10-16T20:00:00+03:00",
-          "baslik": "Mehmed: Fetihler Sultanı",
-          "aciklama": "0088. Bölüm · ÖZETSİZ",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/mehmed-fetihler-sultani.jpg"
-        },
         {
           "baslangic": "2026-10-16T20:00:00+03:00",
           "bitis": "2026-10-17T20:00:00+03:00",

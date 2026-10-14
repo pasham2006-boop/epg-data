@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="dizi-epg" source-info-url="https://1001dizi.net">
-  <channel id="now"><display-name>NOW</display-name></channel>
   <channel id="show-tv"><display-name>Show TV</display-name></channel>
   <channel id="atv"><display-name>atv</display-name></channel>
   <channel id="star-tv"><display-name>Star TV</display-name></channel>
   <channel id="kanal-d"><display-name>Kanal D</display-name></channel>
+  <channel id="now"><display-name>NOW</display-name></channel>
   <channel id="trt-1"><display-name>TRT 1</display-name></channel>
-  <programme start="20261013200000 +0300" stop="20261014200000 +0300" channel="now">
-    <title lang="tr">Anne Yarısı</title>
-    <desc lang="tr">004. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261014200000 +0300" stop="20261015200000 +0300" channel="now">
-    <title lang="tr">Yeraltı</title>
-    <desc lang="tr">0018. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261015200000 +0300" stop="20261018200000 +0300" channel="now">
-    <title lang="tr">Halef</title>
-    <desc lang="tr">0039. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261018200000 +0300" stop="20261018190000 +0300" channel="now">
-    <title lang="tr">Ömür Usta</title>
-    <desc lang="tr">004. Bölüm · Yeni Bölüm</desc>
-  </programme>
   <programme start="20261014200000 +0300" stop="20261015200000 +0300" channel="show-tv">
     <title lang="tr">Sevdan Bir Ateş</title>
     <desc lang="tr">006. Bölüm · Yeni Bölüm</desc>
@@ -42,10 +26,6 @@
     <title lang="tr">Mercan Köşk</title>
     <desc lang="tr">007. Bölüm · Yeni Bölüm</desc>
   </programme>
-  <programme start="20261013200000 +0300" stop="20261015200000 +0300" channel="star-tv">
-    <title lang="tr">Tuzlu Kahve</title>
-    <desc lang="tr">007. Bölüm · Yeni Bölüm</desc>
-  </programme>
   <programme start="20261015200000 +0300" stop="20261017200000 +0300" channel="star-tv">
     <title lang="tr">Sevdiğim Sensin</title>
     <desc lang="tr">0021. Bölüm · Yeni Bölüm</desc>
@@ -53,10 +33,6 @@
   <programme start="20261017200000 +0300" stop="20261017190000 +0300" channel="star-tv">
     <title lang="tr">Başkalarının Hayatı</title>
     <desc lang="tr">004. Bölüm · Yeni Bölüm</desc>
-  </programme>
-  <programme start="20261013200000 +0300" stop="20261017200000 +0300" channel="kanal-d">
-    <title lang="tr">Haysiyet</title>
-    <desc lang="tr">006. Bölüm · Yeni Bölüm</desc>
   </programme>
   <programme start="20261017200000 +0300" stop="20261018200000 +0300" channel="kanal-d">
     <title lang="tr">Güller ve Günahlar</title>
@@ -66,9 +42,17 @@
     <title lang="tr">Daha On Yedi</title>
     <desc lang="tr">0021. Bölüm · Yeni Bölüm</desc>
   </programme>
-  <programme start="20261013200000 +0300" stop="20261016200000 +0300" channel="trt-1">
-    <title lang="tr">Mehmed: Fetihler Sultanı</title>
-    <desc lang="tr">0088. Bölüm · ÖZETSİZ</desc>
+  <programme start="20261014200000 +0300" stop="20261015200000 +0300" channel="now">
+    <title lang="tr">Yeraltı</title>
+    <desc lang="tr">0018. Bölüm · Yeni Bölüm</desc>
+  </programme>
+  <programme start="20261015200000 +0300" stop="20261018200000 +0300" channel="now">
+    <title lang="tr">Halef</title>
+    <desc lang="tr">0039. Bölüm · Yeni Bölüm</desc>
+  </programme>
+  <programme start="20261018200000 +0300" stop="20261018190000 +0300" channel="now">
+    <title lang="tr">Ömür Usta</title>
+    <desc lang="tr">004. Bölüm · Yeni Bölüm</desc>
   </programme>
   <programme start="20261016200000 +0300" stop="20261017200000 +0300" channel="trt-1">
     <title lang="tr">Taşacak Bu Deniz</title>
