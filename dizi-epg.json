@@ -1,38 +1,12 @@
 {
-  "at": 1791947761273,
-  "tarih": "2026-10-14",
+  "at": 1792034176450,
+  "tarih": "2026-10-15",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-14",
-  "pencereBit": "2026-10-20",
+  "pencereBas": "2026-10-15",
+  "pencereBit": "2026-10-21",
   "kanalSayisi": 6,
-  "toplamProgram": 16,
+  "toplamProgram": 14,
   "kanallar": {
-    "show-tv": {
-      "isim": "Show TV",
-      "programlar": [
-        {
-          "baslangic": "2026-10-14T20:00:00+03:00",
-          "bitis": "2026-10-15T20:00:00+03:00",
-          "baslik": "Sevdan Bir Ateş",
-          "aciklama": "006. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/sevdan-bir-ates.jpg"
-        },
-        {
-          "baslangic": "2026-10-15T20:00:00+03:00",
-          "bitis": "2026-10-16T20:00:00+03:00",
-          "baslik": "Muhtemel Aşk",
-          "aciklama": "0018. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/muhtemel-ask.jpg"
-        },
-        {
-          "baslangic": "2026-10-16T20:00:00+03:00",
-          "bitis": "2026-10-16T19:00:00+03:00",
-          "baslik": "Kızılcık Şerbeti",
-          "aciklama": "00143. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/kizilcik-serbeti.jpg"
-        }
-      ]
-    },
     "atv": {
       "isim": "atv",
       "programlar": [
@@ -49,6 +23,25 @@
           "baslik": "Mercan Köşk",
           "aciklama": "007. Bölüm · Yeni Bölüm",
           "afis": "https://1001dizi.net/images2/dizi_k/desk/mercan-kosk.jpg"
+        }
+      ]
+    },
+    "show-tv": {
+      "isim": "Show TV",
+      "programlar": [
+        {
+          "baslangic": "2026-10-15T20:00:00+03:00",
+          "bitis": "2026-10-16T20:00:00+03:00",
+          "baslik": "Muhtemel Aşk",
+          "aciklama": "0018. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/muhtemel-ask.jpg"
+        },
+        {
+          "baslangic": "2026-10-16T20:00:00+03:00",
+          "bitis": "2026-10-16T19:00:00+03:00",
+          "baslik": "Kızılcık Şerbeti",
+          "aciklama": "00143. Bölüm · Yeni Bölüm",
+          "afis": "https://1001dizi.net/images2/dizi_k/desk/kizilcik-serbeti.jpg"
         }
       ]
     },
@@ -93,13 +86,6 @@
     "now": {
       "isim": "NOW",
       "programlar": [
-        {
-          "baslangic": "2026-10-14T20:00:00+03:00",
-          "bitis": "2026-10-15T20:00:00+03:00",
-          "baslik": "Yeraltı",
-          "aciklama": "0018. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/yeralti.jpg"
-        },
         {
           "baslangic": "2026-10-15T20:00:00+03:00",
           "bitis": "2026-10-18T20:00:00+03:00",
