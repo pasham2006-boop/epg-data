@@ -1,24 +1,12 @@
 {
-  "at": 1792120564478,
-  "tarih": "2026-10-16",
+  "at": 1792206899651,
+  "tarih": "2026-10-17",
   "kaynak": "1001dizi.net",
-  "pencereBas": "2026-10-16",
-  "pencereBit": "2026-10-22",
-  "kanalSayisi": 6,
-  "toplamProgram": 10,
+  "pencereBas": "2026-10-17",
+  "pencereBit": "2026-10-23",
+  "kanalSayisi": 5,
+  "toplamProgram": 8,
   "kanallar": {
-    "show-tv": {
-      "isim": "Show TV",
-      "programlar": [
-        {
-          "baslangic": "2026-10-16T20:00:00+03:00",
-          "bitis": "2026-10-16T19:00:00+03:00",
-          "baslik": "Kızılcık Şerbeti",
-          "aciklama": "00143. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/kizilcik-serbeti.jpg"
-        }
-      ]
-    },
     "star-tv": {
       "isim": "Star TV",
       "programlar": [
@@ -53,13 +41,6 @@
     "trt-1": {
       "isim": "TRT 1",
       "programlar": [
-        {
-          "baslangic": "2026-10-16T20:00:00+03:00",
-          "bitis": "2026-10-17T20:00:00+03:00",
-          "baslik": "Taşacak Bu Deniz",
-          "aciklama": "0034. Bölüm · Yeni Bölüm",
-          "afis": "https://1001dizi.net/images2/dizi_k/desk/tasacak-bu-deniz.jpg"
-        },
         {
           "baslangic": "2026-10-17T20:00:00+03:00",
           "bitis": "2026-10-18T17:30:00+03:00",
